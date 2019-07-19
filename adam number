@@ -1,0 +1,44 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+#include<math.h>
+int reverse(int a)
+{
+    int res,val=0;
+    while(a!=0)
+    {
+        res=a%10;
+        val=(val*10)+res;
+        a=a/10;
+    }
+    return val;
+}
+
+
+int main()
+{
+    int r1,r2,n,sq,r3;
+    scanf("%d",&n);
+    sq=n*n;
+    printf("%d",sq);
+    r1=reverse(sq);
+    printf("%d",r1);
+    r2=sqrt(r1);
+    r3=reverse(r2);
+    if(n==r3)
+    {
+        printf("Adam number");
+    }
+    else
+    {
+        printf("not adam");
+    }
+
+    return 0;
+}
