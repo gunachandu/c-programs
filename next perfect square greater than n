@@ -1,0 +1,9 @@
+#include<stdio.h>
+int main()
+{
+    int n,next1;
+    scanf("%d",&n);
+    int next=floor(sqrt(n))+1;
+    next1=next*next;
+    printf("%d",next1);
+}
